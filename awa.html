@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>365 Days With Tasmiyaa 💗</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #ffd6f0);
+      color: #333;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(rgba(255,192,203,0.6), rgba(255,182,193,0.6)), url('images/banner.jpg') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.2rem;
+      color: #e91e63;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    .love-letter {
+      background-color: #fff0f6;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.3s ease-in-out;
+    }
+    .love-letter:hover {
+      transform: translateY(-5px);
+    }
+    .message-box, .surprise {
+      background-color: #ffeef5;
+      border: 2px dashed #e91e63;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .message-box textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .message-box button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #e91e63;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .surprise-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #c2185b;
+      animation: fadeInUp 1s;
+    }
+    .love-bear {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 60px;
+      animation: floatBear 3s infinite ease-in-out;
+    }
+    @keyframes floatBear {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 30px;
+      color: #666;
+      background-color: #ffe0ec;
+    }
+    .audio-btn {
+      text-align: center;
+      margin-top: 40px;
+    }
+    audio {
+      outline: none;
+      margin-top: 10px;
+    }
+    .scroll-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .scroll-btn:hover {
+      background: #c2185b;
+    }
+
+    /* Confetti animation */
+    @keyframes confetti {
+      0% { transform: rotate(0deg); opacity: 1; }
+      100% { transform: rotate(360deg); opacity: 0; }
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .confetti div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #e91e63;
+      animation: confetti 2s ease-in-out infinite;
+    }
+
+    .quote-container {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #c2185b;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>365 Days With Tasmiyaa 💖</h1>
+    <p>One year of love, laughter, and the most beautiful memories</p>
+  </header>
+
+  <section>
+    <h2>Our Journey</h2>
+    <p>
+      From that first innocent text in 8th standard to late-night game sessions and deep conversations — every moment with you, Tasmiyaa, has been like living a dream I never want to wake up from. This website is just a small piece of the love I carry for you every single day. 💞
+    </p>
+  </section>
+
+  <!-- Love Quote Rotator -->
+  <section class="quote-container">
+    <h2>Some Sweet Quotes 💌</h2>
+    <div id="quote"></div>
+  </section>
+
+  <!-- Confetti Animation -->
+  <div id="confetti" class="confetti"></div>
+
+  <section>
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Us 1" />
+      <img src="images/photo2.jpg" alt="Us 2" />
+      <img src="images/photo3.jpg" alt="Us 3" />
+      <img src="images/photo4.jpg" alt="Us 4" />
+    </div>
+  </section>
+
+  <section>
+    <h2>My Love Letter</h2>
+    <div class="love-letter">
+      <p>
+        Dear Tasmiyaa,<br><br>
+        One year ago, you walked into my heart and made it your home. Every laugh, every smile, every moment we’ve shared — it’s etched in me forever. I fall for you more every day. Thank you for being mine. I promise to love you endlessly, through every sunrise and every storm.<br><br>
+        Yours always,<br>
+        Murli 💗
+      </p>
+    </div>
+  </section>
+
+  <section class="audio-btn">
+    <h2>Our Song 🎵</h2>
+    <audio controls>
+      <source src="music/khuda_bhi.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section class="message-box">
+    <h2>Leave Me a Message 💌</h2>
+    <textarea rows="4" placeholder="Write something sweet here..."></textarea><br>
+    <button onclick="alert('Aww! I will read this message later ❤️')">Send</button>
+  </section>
+
+  <section class="surprise">
+    <h2>Click for a Surprise 🎁</h2>
+    <button onclick="document.getElementById('surpriseText').style.display='block'">Open</button>
+    <p id="surpriseText" class="surprise-message">You're the most precious thing that's ever happened to me, Tasmiyaa 💘</p>
+  </section>
+
+  <img src="https://media.giphy.com/media/l0ExncehJzexFpRHq/giphy.gif" class="love-bear" alt="Love Bear" />
+
+  <footer>
+    Made with all my heart for Tasmiyaa 💘 | © 2025 Murli
+  </footer>
+
+  <button class="scroll-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+  <script>
+    // Confetti Generator
+    function createConfetti() {
+      const confettiElement = document.getElementById('confetti');
+      for (let i = 0; i < 100; i++) {
+        const div = document.createElement('div');
+        div.style.top = Math.random() * 100 + '%';
+        div.style.left = Math.random() * 100 + '%';
+        div.style.animationDelay = Math.random() * 2 + 's';
+        confettiElement.appendChild(div);
+      }
+    }
+
+    // Love Quote Rotator
+    const quotes = [
+      "Love is not about how many days, months, or years you’ve been together. Love is about how much you love each other every day.",
+      "I choose you. And I'll choose you over and over and over. Without pause, without a doubt, in a heartbeat. I'll keep choosing you.",
+      "Every love story is beautiful, but ours is my favorite.",
+      "I fall in love with you more every day, and I’m grateful to have you by my side."
+    ];
+
+    let quoteIndex = 0;
+    function showQuote() {
+      document.getElementById('quote').innerText = quotes[quoteIndex];
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+    }
+
+    setInterval(showQuote, 4000); // Change quote every 4 seconds
+    showQuote(); // Show the first quote immediately
+    createConfetti(); // Launch confetti on page load
+  </script>
+</body>
+</html>
